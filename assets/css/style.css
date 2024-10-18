@@ -392,3 +392,17 @@ swiper-slide img {
   font-size: 0.75rem;
   font-weight: 400;
 }
+
+.g-recaptcha {
+  display: flex;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .g-recaptcha {
+    transform: scale(0.77);
+    transform-origin: 0 0;
+    width: 100%;
+  }
+}
