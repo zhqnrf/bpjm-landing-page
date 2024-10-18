@@ -10,19 +10,19 @@ body {
   scroll-behavior: smooth;
 }
 
-.nav-offcanvas li > a.active,
-nav li > a.active {
+.nav-offcanvas li>a.active,
+nav li>a.active {
   color: var(--main-color);
   font-weight: bold;
 }
 
-nav li > a {
+nav li>a {
   position: relative;
   display: inline-block;
   padding-bottom: 6px;
 }
 
-nav li > a::after {
+nav li>a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -33,7 +33,7 @@ nav li > a::after {
   transition: width 0.3s ease-in-out;
 }
 
-nav li > a.active::after {
+nav li>a.active::after {
   width: 100%;
 }
 
@@ -130,6 +130,15 @@ swiper-slide img {
   margin-bottom: 20px;
 }
 
+
+.title-about {
+  margin-bottom: 8px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #438d3d;
+}
+
+
 .service-card {
   position: relative;
   aspect-ratio: 1/1.4;
@@ -159,11 +168,9 @@ swiper-slide img {
   opacity: 0;
   transition: 250ms ease-in all;
   transition-delay: 100ms;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(67, 141, 61, 0.6) 60%
-  );
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(67, 141, 61, 0.6) 60%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -176,13 +183,11 @@ swiper-slide img {
 }
 
 #project h1 {
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       #438d3d 0%,
       rgba(161, 198, 158, 0.7) 50%,
       rgba(208, 227, 207, 0.5) 75%,
-      rgba(255, 255, 255, 0) 100%
-    ),
+      rgba(255, 255, 255, 0) 100%),
     url("../img/project/Header.jpeg");
   background-position-y: 60%;
   background-repeat: no-repeat;
@@ -191,13 +196,11 @@ swiper-slide img {
 }
 
 #project h1:hover {
-  background: linear-gradient(
-      -90deg,
+  background: linear-gradient(-90deg,
       #438d3d 0%,
       rgba(161, 198, 158, 0.7) 50%,
       rgba(208, 227, 207, 0.5) 75%,
-      rgba(255, 255, 255, 0) 100%
-    ),
+      rgba(255, 255, 255, 0) 100%),
     url("../img/project/Header.jpeg");
 }
 
@@ -217,12 +220,10 @@ swiper-slide img {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(104, 178, 99, 0.8),
-    rgba(208, 227, 207, 0.7),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(to right,
+      rgba(104, 178, 99, 0.8),
+      rgba(208, 227, 207, 0.7),
+      rgba(255, 255, 255, 0));
   transition: left 0.5s ease-in-out;
   z-index: 2;
 }
@@ -258,7 +259,7 @@ swiper-slide img {
   --article-card-padding: 12px;
 }
 
-.article-card > p {
+.article-card>p {
   max-height: 40%;
   height: 40%;
   background-color: #fff;
@@ -268,7 +269,7 @@ swiper-slide img {
   line-height: 1.4;
 }
 
-.article-card > p > span {
+.article-card>p>span {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   line-clamp: 1;
@@ -276,7 +277,7 @@ swiper-slide img {
   overflow: hidden;
 }
 
-.article-card > p > button {
+.article-card>p>button {
   color: white;
   background-color: var(--main-color);
   font-size: 13px;
@@ -289,11 +290,11 @@ swiper-slide img {
   transition: all 0.3s ease;
 }
 
-.article-card > p > button i {
+.article-card>p>button i {
   transition: transform 0.3s ease;
 }
 
-.article-card > p > button:hover i {
+.article-card>p>button:hover i {
   transform: translateX(5px);
 }
 
@@ -377,7 +378,7 @@ swiper-slide img {
   }
 }
 
-.contact-container > div > h3 {
+.contact-container>div>h3 {
   font-weight: 700;
 }
 

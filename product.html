@@ -101,10 +101,10 @@
                     <img src="./assets/img/logo/logo-bjpm.png" alt="Logo BJPM" class="w-[70px] aspect-square">
                     <div class="block ms-2 my-auto">
                         <p class="text-sm text-main">PT. BINA JAYA PERKASA MANDIRI</p>
-                        <p class="text-xs text-nav-capt"> “Supplier, Industries, Scaffolding, Beton Lift
+                        <p class="text-xs text-nav-capt"> Supplier, Industries, Scaffolding, Beton Lift
                             Steel
                             Construction,
-                            Stone Crusher “</p>
+                            Stone Crusher </p>
                     </div>
                 </div>
                 <ul
@@ -193,18 +193,42 @@
                 Produk Kami
                 <br>
             </h1>
-            <div class="md:flex block justify md:my-8 my-0 mb-8 ">
-                <div class="w:1/3 md:mr-6 mr-0">
-                    <nav class="mb-4  block text-center bg-white justify-center md:w-[100px] w-auto">
-                        <div class="text-white font-bold p-4 mx-auto bg-main ">Kategori</div>
-                        <button class="filter-btn active" data-filter="all">All</button>
-                        <button class="filter-btn" data-filter="horrybeam">Horrybeam</button>
-                        <button class="filter-btn" data-filter="pipa">Pipa</button>
-                        <button class="filter-btn" data-filter="sccafolding">Sccafolding</button>
+            <div class="md:flex block justify md:my-10 my-0 mb-8">
+                <!-- Kategori -->
+                <div class="w-full md:w-3/12 md:mr-10 mr-0">
+                    <nav class="mb-4 flex-col block  bg-white justify-center w-full">
+                        <div class="text-white font-bold p-4  text-xl bg-main cursor-pointer"
+                            onclick="toggleAccordion('accordion')">
+                            Kategori
+                        </div>
+                        <ul id="accordion" class="md:block hidden text-left p-4">
+                            <li class="mb-4">
+                                <span class="font-bold text-main cursor-pointer"
+                                    onclick="toggleSubCategories('sub-category-1')">Kategori 1</span>
+                                <ul id="sub-category-1" class="pl-4 mt-2 hidden">
+                                    <li><button class="filter-btn" data-filter="sccafolding">Sccafolding</button></li>
+                                </ul>
+                            </li>
+                            <li class="mb-4">
+                                <span class="font-bold text-main cursor-pointer"
+                                    onclick="toggleSubCategories('sub-category-2')">Kategori 2</span>
+                                <ul id="sub-category-2" class="pl-4 mt-2 hidden">
+                                    <li><button class="filter-btn" data-filter="horrybeam">Horrybeam</button></li>
+                                    <li><button class="filter-btn" data-filter="pipa">Pipa</button></li>
+
+                                </ul>
+                            </li>
+                            <li class="font-bold text-main cursor-pointer filter-btn" onclick="" data-filter="all">All
+                            </li>
+                        </ul>
+
                     </nav>
                 </div>
-                <div class="w:2/3">
-                    <div class="justify-start gap-12 block md:flex md:flex-wrap product-card-container">
+
+                <!-- Produk -->
+                <div class="w-full md:w-9/12">
+                    <div class="justify-start gap-10 block md:flex md:flex-wrap product-card-container">
+                        <!-- Product Card 1 -->
                         <div class="product-card" data-category="horrybeam">
                             <img src="./assets/img/product/horrybeam.jpg" alt="" class="object-cover w-full h-full">
                             <p class="product-text">Horrybeam</p>
@@ -212,33 +236,39 @@
                                 class="product-btn text-sm">Selengkapnya</a>
                         </div>
 
+                        <!-- Product Card 2 -->
                         <div class="product-card" data-category="horrybeam">
                             <img src="./assets/img/product/horrybeam.jpg" alt="" class="object-cover w-full h-full">
                             <p class="product-text">Horrybeam</p>
                             <a href="./detail-product.html" style="text-decoration:none;"
                                 class="product-btn text-sm">Selengkapnya</a>
                         </div>
+
+                        <!-- Product Card 3 -->
                         <div class="product-card" data-category="horrybeam">
                             <img src="./assets/img/product/horrybeam.jpg" alt="" class="object-cover w-full h-full">
                             <p class="product-text">Horrybeam</p>
                             <a href="./detail-product.html" style="text-decoration:none;"
                                 class="product-btn text-sm">Selengkapnya</a>
-
                         </div>
 
+                        <!-- Product Card 4 -->
                         <div class="product-card" data-category="sccafolding">
                             <img src="./assets/img/product/sccafolding.jpg" alt="" class="object-cover w-full h-full">
                             <p class="product-text">Sccafolding</p>
                             <a href="./detail-product.html" style="text-decoration:none;"
                                 class="product-btn text-sm">Selengkapnya</a>
                         </div>
+
+                        <!-- Product Card 5 -->
                         <div class="product-card" data-category="sccafolding">
                             <img src="./assets/img/product/sccafolding.jpg" alt="" class="object-cover w-full h-full">
                             <p class="product-text">Sccafolding</p>
                             <a href="./detail-product.html" style="text-decoration:none;"
                                 class="product-btn text-sm">Selengkapnya</a>
-
                         </div>
+
+                        <!-- Product Card 6 -->
                         <div class="product-card" data-category="pipa">
                             <img src="./assets/img/product/pipa.jpg" alt="" class="object-cover w-full h-full">
                             <p class="product-text">Pipa</p>
@@ -246,10 +276,33 @@
                                 class="product-btn text-sm">Selengkapnya</a>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
+
+        <script>
+            function toggleAccordion(id) {
+                const accordion = document.getElementById(id);
+                if (window.innerWidth < 768) {
+                    accordion.classList.toggle('hidden');
+                }
+            }
+
+            if (window.innerWidth >= 768) {
+                const accordion = document.getElementById('accordion');
+                accordion.classList.remove('hidden');
+            }
+
+            function toggleSubCategories(subCategoryId) {
+                const subCategory = document.getElementById(subCategoryId);
+                if (subCategory.classList.contains('hidden')) {
+                    subCategory.classList.remove('hidden');
+                } else {
+                    subCategory.classList.add('hidden');
+                }
+            }
+        </script>
+
     </div>
     <footer id="contact" class="p-10  bg-main">
         <h1 class="text-main text-[20px] font-bold mb-4">Hubungi Kami</h1>
