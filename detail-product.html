@@ -191,6 +191,28 @@
             </div>
         </header>
         <section id="detail-section" class="my-8 px-10">
+            <!-- Breadcrumb -->
+            <nav class="flex mb-4" aria-label="Breadcrumb" data-aos="fade-right">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="#" class="text-gray-700 hover:text-main text-sm font-medium">Home</a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <span class="mx-2 text-gray-400">/</span>
+                            <a href="#" class="text-gray-700 hover:text-main text-sm font-medium">Produk</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <span class="mx-2 text-gray-400">/</span>
+                            <span class="text-gray-500 text-sm font-medium">Horrybeam</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+
+            <!-- Detail Produk -->
             <h2 class="text-2xl font-bold text-center text-main mb-10 border-b-4 w-fit pb-2 border-main"
                 data-aos="fade-up">
                 Detail Produk</h2>
@@ -209,6 +231,39 @@
                         <li>Bahan: Kayu berkualitas tinggi</li>
                         <li>Berat: 25 kg</li>
                     </ul>
+                </div>
+            </div>
+
+            <!-- Produk Lainnya -->
+            <div class="mt-10" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-xl font-bold text-main mb-6">Produk Lainnya</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                        <img src="./assets/img/product/horrybeam.jpg" alt="Produk 1" class="object-cover w-full h-48">
+                        <h4 class="mt-2 text-lg font-semibold text-main">Produk 1</h4>
+                        <p class="text-gray-600 mt-1">Deskripsi singkat produk 1.</p>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                        <img src="./assets/img/product/horrybeam.jpg" alt="Produk 2" class="object-cover w-full h-48">
+                        <h4 class="mt-2 text-lg font-semibold text-main">Produk 2</h4>
+                        <p class="text-gray-600 mt-1">Deskripsi singkat produk 2.</p>
+                    </div>
+                    <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                        <img src="./assets/img/product/horrybeam.jpg" alt="Produk 3" class="object-cover w-full h-48">
+                        <h4 class="mt-2 text-lg font-semibold text-main">Produk 3</h4>
+                        <p class="text-gray-600 mt-1">Deskripsi singkat produk 3.</p>
+                    </div>
+                    <div class="product-card relative group" data-aos="fade-up" data-aos-delay="400">
+                        <img src="./assets/img/product/horrybeam.jpg" alt="Produk 4"
+                            class="object-cover w-full h-48 transition duration-300 group-hover:opacity-0">
+                        <h4 class="mt-2 text-lg font-semibold text-main">Produk 4</h4>
+                        <p class="text-gray-600 mt-1">Deskripsi singkat produk 4.</p>
+                        <!-- Hover effect -->
+                        <div
+                            class="absolute inset-0 bg-main text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="./product.html" class="text-xl font-semibold">Lihat Semua Produk</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
